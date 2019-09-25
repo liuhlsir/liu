@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+    <audio id="audio" src="" preload></audio>
+
+    <div>
+        <div class="bg"></div>
+        <div class="content">
+            <div class="content-box">
+            <!-- 搜索导航 -->
+            <div class="nav">
+                <div class="nav-box">
+                    <input class="search-ipt" type="text" />
+                </div>
+                <div class="search"></div>
+            </div>
+
+            <!-- 歌曲所有列表 data-title = 0: 本地歌曲, 1: 最近播放，2：我的收藏 -->
+            <div class="list">
+                <ul id="all-list">
+                    <li data-title="0">
+                        <div class="clearfix title">
+                                <div class="fl">本地歌曲</div>
+                                <div class="fr clearfix">
+                                    <span  class="count fl local-song">0</span>
+                                    <span class="arrow fl"></span>
+                                </div>
+                        </div>
+                    </li>
+                    <li data-title="1">
+                        <div class="title clearfix">
+                                <div class="fl">最近播放</div>
+                                <div class="fr clearfix">
+                                        <span  class="count fl">289</span>
+                                        <span class="arrow fl"></span>
+                                    </div>
+                        </div>
+                    </li>
+                    <li data-title="2">
+                        <div class="title clearfix">
+                                <div class="fl">我的收藏</div>
+                                <div class="fr clearfix">
+                                        <span  class="count fl">289</span>
+                                        <span class="arrow fl"></span>
+                                    </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 查看歌曲列表 -->
+            <div class="read-list" data-title="0">
+                <div class="song-title">
+                    <span class="back"></span>
+                    本地歌曲
+                </div>
+                <div class="song-list">
+                    <ul id="current-list">
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 控制条 -->
+            <div class="controls-box main-controls">
+                <div class="clearfix time">
+                    <span class="fl ctime">00:00</span>
+                    <span class="fr dtime">00:00</span>
+                    <div class="sing">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="progress m-progress">
+                    <div class="progress-active m-progress-active"></div>
+                    <div class="mask m-mask"></div>
+                    <div class="event-progress m-event-progress"></div>
+                </div>
+                <div class="controls">
+                    <div class="singer-img fl">
+                        <img class="auto-img" src="" alt="">
+                    </div>
+                    <div class="controls-btn fl">
+                        <div>
+                                <div class="prev l-r m-prev"></div>
+                        </div>
+                        <div>
+                                <div class="play-stop m-play-stop"></div>
+                        </div>
+                        <div>
+                                <div class="next l-r m-next"></div>
+                        </div>
+                       
+                    </div>
+                    <div class="control-icon fl">
+                        <span class="like"></span>
+                        <span class="speed">倍速1</span>
+                        <span class="mode m-mode" data-min="1" data-max="3" data-value="2"></span>
+                        <!-- 1: 单曲循环，2：列表循环 ，3：随机播放 -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+            <!-- 歌词 -->
+            <div class="song-word">
+                <div class="disc"></div>
+
+                <div class="words">
+                    <div class="words-box">
+                    </div>
+                </div>
+
+                <!-- 关闭 -->
+                <div class="close">
+                    <i class="a a1"></i>
+                    <i class="a a2"></i>
+                </div>
+
+                <!-- 控制条 -->
+                <div class="controls-box">
+                        <div class="clearfix time">
+                            <span class="fl ctime">00:00</span>
+                            <span class="fr dtime">00:00</span>
+                            <div class="sing">
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-active m-progress-active"></div>
+                            <div class="mask m-mask"></div>
+                            <div class="event-progress m-event-progress"></div>
+                        </div>
+                        <div class="controls">
+                            <div class="controls-btn fl sond-word-controls">
+                                <div>
+                                        <div class="prev l-r m-prev"></div>
+                                </div>
+                                <div>
+                                        <div class="play-stop m-play-stop"></div>
+                                </div>
+                                <div>
+                                        <div class="next l-r m-next"></div>
+                                </div>
+                            
+                            </div>
+                            <div class="control-icon fl">
+                                <span class="like"></span>
+                                <span class="speed">倍速1</span>
+                                <span class="mode m-mode" data-min="1" data-max="3" data-value="2"></span>
+                            </div>
+                        </div>
+        
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
